@@ -1,17 +1,17 @@
-import { Header } from "../components/Header";
-import { Hero } from "../components/Hero";
-import { Skills } from "../components/Skills";
-import { ProjectsPlaceholder } from "../components/ProjectsPlaceholder";
+import { AboutSection } from "../components/AboutSection";
+import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
+import { ProjectsSection } from "../components/ProjectsSection";
 
 export function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-slate-950">
       <Header />
       <main>
-        <Hero />
-        <Skills />
-        <ProjectsPlaceholder />
+        <AboutSection />
+        <ProjectsSection />
+        <ContactSection />
       </main>
       <Footer />
     </div>

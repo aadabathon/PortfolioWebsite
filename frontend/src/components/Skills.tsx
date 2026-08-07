@@ -2,16 +2,16 @@ import { profile } from "../content/profile";
 
 export function Skills() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-8">
-      <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+    <div className="mt-10">
+      <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
         Skills
-      </h2>
+      </h3>
       <div className="mt-4 space-y-4">
         {profile.skillGroups.map((group) => (
           <div key={group.title}>
-            <h3 className="text-sm font-medium text-slate-700 dark:text-slate-300">
+            <h4 className="text-sm font-medium text-slate-700 dark:text-slate-300">
               {group.title}
-            </h3>
+            </h4>
             <div className="mt-2 flex flex-wrap gap-2">
               {group.skills.map((skill) => (
                 <span
@@ -25,6 +25,6 @@ export function Skills() {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
