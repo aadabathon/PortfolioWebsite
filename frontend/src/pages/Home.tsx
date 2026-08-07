@@ -1,22 +1,19 @@
-import { useEffect, useState } from "react";
-import { fetchBackendStatus } from "../services/api";
-
-type ConnectionState = "checking" | "connected" | "unreachable";
+import { Header } from "../components/Header";
+import { Hero } from "../components/Hero";
+import { Skills } from "../components/Skills";
+import { ProjectsPlaceholder } from "../components/ProjectsPlaceholder";
+import { Footer } from "../components/Footer";
 
 export function Home() {
-  const [backendState, setBackendState] = useState<ConnectionState>("checking");
-
-  useEffect(() => {
-    fetchBackendStatus()
-      .then(() => setBackendState("connected"))
-      .catch(() => setBackendState("unreachable"));
-  }, []);
-
   return (
-    <main>
-      <h1>Portfolio</h1>
-      <p>Frontend is running.</p>
-      <p>Backend API: {backendState}</p>
-    </main>
+    <div className="min-h-screen bg-white dark:bg-slate-950">
+      <Header />
+      <main>
+        <Hero />
+        <Skills />
+        <ProjectsPlaceholder />
+      </main>
+      <Footer />
+    </div>
   );
 }
