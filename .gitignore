@@ -1,0 +1,29 @@
+# --- Environment ---
+.env
+
+# --- Node / frontend ---
+node_modules/
+frontend/dist/
+npm-debug.log*
+
+# --- Java / Maven / backend ---
+backend/target/
+*.class
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+
+# --- Python / ml-service ---
+ml-service/.venv/
+ml-service/venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# --- IDE ---
+.idea/
+.vscode/
+*.iml
+
+# --- OS ---
+.DS_Store
+Thumbs.db
