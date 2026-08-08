@@ -43,4 +43,20 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/aadabathon/TODO",
     tags: [],
   },
+  {
+    slug: "tbd-project-5",
+    title: "TBD",
+    description: "TBD",
+    imageUrl: "/images/projects/tbd-project-5.png",
+    githubUrl: "https://github.com/aadabathon/TODO",
+    tags: [],
+  },
+  {
+    slug: "tbd-project-6",
+    title: "TBD",
+    description: "TBD",
+    imageUrl: "/images/projects/tbd-project-6.png",
+    githubUrl: "https://github.com/aadabathon/TODO",
+    tags: [],
+  },
 ];

@@ -48,7 +48,7 @@ export const profile: Profile = {
     },
     { 
       title: "Embedded",
-      skills: ["Alitum", "PSoC6", "Modus Toolbox", "UART", "SPI", "I2C", "FreeRTOS"],
+      skills: ["Altium", "PSoC6", "Modus Toolbox", "UART", "SPI", "I2C", "FreeRTOS"],
     }
   ],
 };
