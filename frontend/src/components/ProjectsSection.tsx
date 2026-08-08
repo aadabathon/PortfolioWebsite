@@ -1,4 +1,6 @@
+import { projects } from "../content/projects";
 import { Container } from "./Container";
+import { ProjectCard } from "./ProjectCard";
 import { ProjectsPlaceholder } from "./ProjectsPlaceholder";
 
 export function ProjectsSection() {
@@ -11,7 +13,15 @@ export function ProjectsSection() {
         <h2 className="text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">
           Projects
         </h2>
-        <ProjectsPlaceholder />
+        {projects.length > 0 ? (
+          <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {projects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
+        ) : (
+          <ProjectsPlaceholder />
+        )}
       </Container>
     </section>
   );

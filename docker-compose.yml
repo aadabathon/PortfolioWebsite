@@ -29,6 +29,7 @@ services:
       DB_USER: ${POSTGRES_USER:-portfolio}
       DB_PASSWORD: ${POSTGRES_PASSWORD:-portfolio}
       ML_SERVICE_URL: http://ml-service:8000
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost:5173}
     ports:
       - "8080:8080"
     depends_on:
