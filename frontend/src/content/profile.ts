@@ -10,7 +10,7 @@ export const profile: Profile = {
   bio: [ 
 	"Hi, I am Adam! I'm a senior at the University of Wisconsin–Madison studying Computer Engineering. I'm broadly passionate about technology and science, and I enjoy working across the boundary between hardware and software.",
 
-"My primary focus is hardware engineering. Computer architecture, digital design, VLSI, ASICs, FPGAs, and hardware accelerators are the areas that excite me most as I begin my career. I especially enjoy understanding computing across levels of abstraction; From transistors and digital logic to processors, operating systems, and the software that runs on top of them.",
+"My primary focus is hardware engineering. Computer architecture, digital design, VLSI, ASICs, FPGAs, and hardware accelerators are the areas that excite me most as I begin my career. I especially enjoy understanding computing across levels of abstraction; from transistors and digital logic to processors, operating systems, and the software that runs on top of them.",
 
 "Outside of hardware, I program because I enjoy building things. Most of my software projects start with something I want for myself: a tool for exploring an idea, automating a workflow, analyzing data, or supporting another hobby. I've worked primarily with Python, C, Java, and SystemVerilog, with projects spanning embedded systems, digital hardware, data processing, and web development.",
 
