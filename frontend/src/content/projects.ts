@@ -4,7 +4,9 @@ import type { Project } from "../types/project";
 //   - description: replace the TODO with real copy.
 //   - imageUrl: drop the image file in frontend/public/images/projects/
 //     and point this at it, e.g. "/images/projects/16-bit-processor.png".
-//   - githubUrl: link to the actual repo.
+//   - repos: one entry per linked repo. Most projects only need one; give
+//     each entry a short label so multiple repos are distinguishable
+//     (shown as the tooltip/aria-label on its GitHub icon).
 //   - tags: whatever languages/tools are relevant (shown as pills on the card).
 //   - demoUrl: optional — a write-up or demo link, omit if you don't have one.
 //
@@ -16,7 +18,9 @@ export const projects: Project[] = [
     title: "16-Bit Processor",
     description: "TODO: add a description.",
     imageUrl: "/images/projects/16-bit-processor.png",
-    githubUrl: "https://github.com/aadabathon/TODO",
+    repos: [
+      { label: "GitHub", url: "https://github.com/aadabathon/16_Bit_CPU" },
+    ],
     tags: [],
   },
   {
@@ -24,7 +28,9 @@ export const projects: Project[] = [
     title: "SFP Embedded Project",
     description: "TODO: add a description.",
     imageUrl: "/images/projects/sfp-embedded-project.png",
-    githubUrl: "https://github.com/aadabathon/TODO",
+    repos: [
+      { label: "GitHub", url: "https://github.com/aadabathon/SFPmodule" },
+    ],
     tags: [],
   },
   {
@@ -32,7 +38,16 @@ export const projects: Project[] = [
     title: "PSoC6 CY8 AI Board",
     description: "TODO: add a description.",
     imageUrl: "/images/projects/psoc6-cy8-ai-board.png",
-    githubUrl: "https://github.com/aadabathon/TODO",
+    repos: [
+      {
+        label: "AI Working Dir",
+        url: "https://github.com/aadabathon/PSoC6AI-workingDir",
+      },
+      {
+        label: "Logging / ML",
+        url: "https://github.com/aadabathon/PSoC6-logging-ML",
+      },
+    ],
     tags: [],
   },
   {
@@ -40,7 +55,12 @@ export const projects: Project[] = [
     title: "ECE 551 SoC Mazerunner",
     description: "TODO: add a description.",
     imageUrl: "/images/projects/ece551-soc-mazerunner.png",
-    githubUrl: "https://github.com/aadabathon/TODO",
+    repos: [
+      {
+        label: "GitHub",
+        url: "https://github.com/aadabathon/ECE-stuff/tree/ECE-551-Ex/FinalProj",
+      },
+    ],
     tags: [],
   },
   {
@@ -48,7 +68,7 @@ export const projects: Project[] = [
     title: "TBD",
     description: "TBD",
     imageUrl: "/images/projects/tbd-project-5.png",
-    githubUrl: "https://github.com/aadabathon/TODO",
+    repos: [{ label: "GitHub", url: "https://github.com/aadabathon/TODO" }],
     tags: [],
   },
   {
@@ -56,7 +76,7 @@ export const projects: Project[] = [
     title: "TBD",
     description: "TBD",
     imageUrl: "/images/projects/tbd-project-6.png",
-    githubUrl: "https://github.com/aadabathon/TODO",
+    repos: [{ label: "GitHub", url: "https://github.com/aadabathon/TODO" }],
     tags: [],
   },
 ];
