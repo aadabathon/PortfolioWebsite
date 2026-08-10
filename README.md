@@ -1,65 +1,26 @@
 # Portfolio
 
-This is my personal engineering portfolio, and also my excuse to actually
-build a full-stack project end to end instead of just reading about how
-it's done: a React/TypeScript frontend, a Spring Boot (Java) API, a FastAPI
-(Python) service for ML work, and Postgres underneath it all. Deployed
-pieces separately, wired together with plain REST and environment
-variables, nothing fancier than it needs to be.
+My personal engineering portfolio: About Me, Projects, and (eventually) a
+blog, built as a plain static React/TypeScript site and deployed on
+Cloudflare Workers.
 
-If you want the "why," not just the "what," [`docs/architecture.md`](docs/architecture.md)
-walks through how the services fit together and why they're split the way
-they are.
+It used to be a four-service full-stack app (React frontend, Spring Boot
+API, FastAPI ML service, Postgres) hosted on Railway. That was fun to build
+and a good way to learn Docker/Compose and PaaS deployment, but a resume
+site doesn't need a JVM and a Python runtime idling 24/7 for basically zero
+traffic. Everything here is static content now, so it costs nothing to
+host. The Quant and ML tools mentioned in the nav will come back later as
+their own separate apps, built and deployed independently, spun up only
+when actually being demoed.
 
-## Where things actually stand
+## Stack
 
-The frontend is real: it's a working single-page site (About Me, Projects,
-Contact) plus a side-nav shell with stub pages for a blog and some
-interactive Quant/ML tools I haven't built yet. The backend and ML service
-run, are Dockerized, and talk to each other and to Postgres — but they're
-still just scaffolding underneath the frontend. Projects, blog posts, and
-everything else still needs to move from "hardcoded in the frontend" to
-"stored in the database and served over the API," which is next up.
+- React 19 + TypeScript
+- Vite
+- Tailwind CSS v4
+- React Router
 
-## Prerequisites
-
-- [Docker](https://www.docker.com/) and Docker Compose (bundled with Docker
-  Desktop)
-- Node.js 22+ and Java 21+ / Python 3.12+ only if you want to run a service
-  outside Docker
-
-## Running everything
-
-```bash
-cp .env.example .env
-docker compose up --build
-```
-
-That starts all four services:
-
-| Service    | URL                                    |
-|------------|-----------------------------------------|
-| frontend   | http://localhost:5173                   |
-| backend    | http://localhost:8080/actuator/health   |
-| ml-service | http://localhost:8000/health            |
-| postgres   | localhost:5432                          |
-
-Open http://localhost:5173 and you should land on the portfolio page, with
-a small "API: connected" indicator in the footer confirming the frontend
-can actually reach the backend.
-
-## Working on one service at a time
-
-Rebuilding a Docker image every time you tweak a line of code gets old
-fast, so for active development I usually keep Postgres, the backend, and
-the ML service in Docker and run the frontend natively for instant hot
-reload:
-
-```bash
-docker compose up postgres backend ml-service
-```
-
-**Frontend**
+## Running locally
 
 ```bash
 cd frontend
@@ -67,52 +28,29 @@ npm install
 npm run dev
 ```
 
-**Backend** (needs Postgres reachable at `localhost:5432`, e.g. via
-`docker compose up postgres`)
+Open http://localhost:5173.
 
-```bash
-cd backend
-./mvnw spring-boot:run
-```
+## Deployment
 
-**ML service**
+Pushes to `main` auto-deploy via Cloudflare Workers Builds:
 
-```bash
-cd ml-service
-python -m venv .venv
-.venv\Scripts\activate   # Windows; use `source .venv/bin/activate` on macOS/Linux
-pip install -r requirements.txt
-uvicorn app.main:app --reload
-```
+1. Cloudflare clones the repo and runs `npm run build` inside `frontend/`
+   (Vite's static output goes to `frontend/dist`).
+2. `frontend/wrangler.jsonc` tells Wrangler to serve that `dist` folder as
+   static assets, with `not_found_handling: single-page-application` so
+   client-side routes like `/blog` fall back to `index.html` instead of
+   404ing.
+3. `npx wrangler deploy` ships it.
 
-## Ports
-
-| Port | Service                     |
-|------|-------------------------------|
-| 5173 | frontend (Vite dev server)    |
-| 8080 | backend (Spring Boot)         |
-| 8000 | ml-service (FastAPI/Uvicorn)  |
-| 5432 | postgres                      |
+No environment variables, no build secrets, no backend to wire up.
 
 ## Repository layout
 
 ```
-frontend/     React + TypeScript client
-backend/      Spring Boot API, PostgreSQL persistence, service coordination
-ml-service/   FastAPI service for model inference
-docs/         Architecture and design documentation
-```
-
-## Tests
-
-```bash
-cd backend && ./mvnw test
-cd ml-service && pytest
+frontend/     React + TypeScript site (the whole app)
 ```
 
 ## What's next
 
-Roughly in order: move Projects from a hardcoded array into Postgres and a
-real API, add admin authentication, bring the blog online, then build out
-the ML and Quant tool pages for real. `docs/architecture.md` has the longer
-version of this plan.
+Real content for the Projects section, a proper photo, and blog posts.
+Quant and ML tools are future, separate projects — not part of this repo.
