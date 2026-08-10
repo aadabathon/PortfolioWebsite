@@ -58,7 +58,7 @@ export const projects: Project[] = [
     repos: [
       {
         label: "GitHub",
-        url: "https://github.com/aadabathon/ECE-stuff/tree/ECE-551-Ex/FinalProj",
+        url: "https://github.com/aadabathon/ECE551/tree/main/FinalProj",
       },
     ],
     tags: [],
