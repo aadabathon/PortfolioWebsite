@@ -64,11 +64,13 @@ export const projects: Project[] = [
     tags: [],
   },
   {
-    slug: "tbd-project-5",
-    title: "TBD",
-    description: "TBD",
-    imageUrl: "/images/projects/tbd-project-5.png",
-    repos: [{ label: "GitHub", url: "https://github.com/aadabathon/TODO" }],
+    slug: "quanthub",
+    title: "QuantHub",
+    description: "TODO: add a description.",
+    imageUrl: "/images/projects/quanthub.png",
+    repos: [
+      { label: "GitHub", url: "https://github.com/aadabathon/quanthub" },
+    ],
     tags: [],
   },
   {
