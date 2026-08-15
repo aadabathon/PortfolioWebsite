@@ -17,7 +17,7 @@ export function AboutSection() {
           <img
             src="/images/profile/websitepic1.jpg"
             alt={profile.name}
-            className="h-32 w-32 flex-shrink-0 rounded-full object-cover sm:h-40 sm:w-40"
+            className="h-32 w-32 flex-shrink-0 rounded-xl object-cover sm:h-40 sm:w-40"
           />
         </div>
         <Skills />
