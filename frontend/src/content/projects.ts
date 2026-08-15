@@ -74,11 +74,13 @@ export const projects: Project[] = [
     tags: [],
   },
   {
-    slug: "tbd-project-6",
-    title: "TBD",
-    description: "TBD",
-    imageUrl: "/images/projects/tbd-project-6.png",
-    repos: [{ label: "GitHub", url: "https://github.com/aadabathon/TODO" }],
+    slug: "mlcookbook",
+    title: "MLcookbook",
+    description: "TODO: add a description.",
+    imageUrl: "/images/projects/mlcookbook.png",
+    repos: [
+      { label: "GitHub", url: "https://github.com/aadabathon/MLcookbook" },
+    ],
     tags: [],
   },
 ];
