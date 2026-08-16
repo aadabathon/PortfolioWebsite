@@ -9,6 +9,14 @@ export function ResumeViewer() {
         </h3>
         <div className="flex gap-4 text-sm">
           <a
+            href="/transcript.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="text-slate-600 underline underline-offset-2 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100"
+          >
+            Transcripts
+          </a>
+          <a
             href={profile.links.resume}
             target="_blank"
             rel="noreferrer"
