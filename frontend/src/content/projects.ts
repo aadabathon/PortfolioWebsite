@@ -26,7 +26,8 @@ export const projects: Project[] = [
   {
     slug: "sfp-embedded-project",
     title: "SFP Embedded Project",
-    description: "TODO: add a description.",
+    description:
+      "SFP+ Carrier Board — A 4-layer, 10 Gb/s SFP+ interface board (Altium) for a free-space optical comms experiment, routing the module's high-speed pairs out to SMA coax and control lines to a header. I designed the full signal path from first principles: 100 Ω differential geometry from transmission-line physics, GCPW with λ/10 stitching for return-path continuity, pairs length-matched under 3 mil, and a two-ground architecture isolating chassis from the signal reference.",
     imageUrl: "/images/projects/sfp-embedded-project.png",
     repos: [
       { label: "GitHub", url: "https://github.com/aadabathon/SFPmodule" },
