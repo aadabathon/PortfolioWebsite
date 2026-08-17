@@ -54,7 +54,7 @@ export const projects: Project[] = [
   {
     slug: "ece551-soc-mazerunner",
     title: "ECE 551 SoC Mazerunner",
-    description: "TODO: add a description.",
+    description: "Mazerunner was a guided, semester-long system-on-a-chip project. By the end of the semester, the hierarchy was comprised of over ten modules. SPI and UART modules were implemented for communication with the GYRO and BLE interfaces respectively. The project used infrared light to determine the direction the rover was facing, and the difference between it and the desired heading was fed into a PID module to attenuate or amplify wheel rotation. Mazerunner took commands like 'Move until left-open', but it also could solve the maze on its own, declaring its victory with a song once it had reached a magnet. The entire design was pipelined to meet timing constraints, synthesized in Quartus and Synopsys Design compiler, and demoed live.",
     imageUrl: "/images/projects/ece551-soc-mazerunner.png",
     repos: [
       {
