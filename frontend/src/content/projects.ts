@@ -16,7 +16,7 @@ export const projects: Project[] = [
   {
     slug: "16-bit-processor",
     title: "16-Bit Processor",
-    description: "TODO: add a description.",
+    description: "This 16-Bit procesesor draws heavy inspiration from the LC-3's instruction set, and is implemented entirely in SystemVerilog.",
     imageUrl: "/images/projects/16-bit-processor.png",
     repos: [
       { label: "GitHub", url: "https://github.com/aadabathon/16_Bit_CPU" },
