@@ -77,8 +77,7 @@ export const projects: Project[] = [
   {
     slug: "mlcookbook",
     title: "MLcookbook",
-    description: "TODO: add a description.",
-    imageUrl: "/images/projects/mlcookbook.png",
+    description: "The MLcookbook is an extensible, interactive machine-learning workbench built around “recipes” for common ML workflows. Each recipe combines an explanation of the underlying technique, visualizations of model behavior, and hands-on experimentation with user-provided datasets. The project begins with classical techniques such as regression, decision trees, random forests, and PCA, with a longer-term roadmap toward neural networks and more advanced workflows. Rather than functioning only as a collection of demos, MLcookbook is being designed as a reusable pipeline from dataset ingestion through preprocessing, feature engineering, training, evaluation, and visualization. This project is prepatory, and intentionally open-ended: new algorithms and workflows will continuously added as new recipe modules.",
     repos: [
       { label: "GitHub", url: "https://github.com/aadabathon/MLcookbook" },
     ],
