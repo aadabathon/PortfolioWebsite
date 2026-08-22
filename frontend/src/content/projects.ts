@@ -16,7 +16,7 @@ export const projects: Project[] = [
   {
     slug: "16-bit-processor",
     title: "16-Bit Processor",
-    description: "A 16-Bit CPU implemented from scratch in SystemVerilog, with an instruction set inspired by the LC-3. This build has a multi-cycle datapath, and does meet timing, even without pipelining (STA reports omitted from the repo due to tool licensing). Included is the Vivado workflow to synthesize and program this CPU on a Basys3 FPGA development board. The constraints file (adam16.xdc) maps switches, buttons, and LEDs directly to CPU debug signals (PC, IR, ALU output, flags) so you can single-step through a program and watch execution live on the board. See /demo.md in the GitHub repository for instructions to run the build yourself!",
+    description: "A 16-Bit CPU implemented from scratch in SystemVerilog, with an instruction set inspired by the LC-3. The design uses a multi-cycle datapath and meets timing without pipelining (STA reports omitted from the repo due to tool licensing). Included in the repository is the complete Vivado workflow to synthesize and program the processor onto a Basys3 FPGA development board. The accompanying constraints file (/fpga/constraints/adam16.xdc) maps board switches, buttons, and LEDs directly to internal debug signals including the program counter, instruction register, ALU output, and condition flags. This allows programs to be single-stepped through and execution state to be observed directly on hardware. See /demo.md in the GitHub repository for instructions to run the build yourself!",
     imageUrl: "/images/projects/16-bit-processor.png",
     repos: [
       { label: "GitHub", url: "https://github.com/aadabathon/16_Bit_CPU" },
