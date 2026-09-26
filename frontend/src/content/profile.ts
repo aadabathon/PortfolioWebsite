@@ -1,8 +1,7 @@
 import type { Profile } from "../types/profile";
 
 // Single source of truth for the static portfolio content.
-// Projects intentionally aren't here: per the product plan, project data
-// comes from the backend/database, not a frontend constant.
+// Project entries live in ./projects.ts.
 export const profile: Profile = {
   name: "Adam Shebani",
   role: "Computer Engineering Senior @ UW-Madison",

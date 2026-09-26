@@ -1,17 +1,13 @@
 import type { Project } from "../types/project";
 
-// Fill in each project below as you're ready:
-//   - description: replace the TODO with real copy.
-//   - imageUrl: drop the image file in frontend/public/images/projects/
-//     and point this at it, e.g. "/images/projects/16-bit-processor.png".
-//   - repos: one entry per linked repo. Most projects only need one; give
-//     each entry a short label so multiple repos are distinguishable
-//     (shown as the tooltip/aria-label on its GitHub icon).
-//   - tags: whatever languages/tools are relevant (shown as pills on the card).
-//   - demoUrl: optional — a write-up or demo link, omit if you don't have one.
+// Images live in frontend/public/images/projects/ and are referenced by
+// absolute path. An empty array here makes ProjectsSection fall back to a
+// "coming soon" placeholder.
 //
-// If this array is empty, the Projects section falls back to a
-// "coming soon" placeholder automatically — see ProjectsSection.tsx.
+// Pending, not listed until they have a description and a screenshot:
+//   PSoC6 CY8 AI Board
+//     https://github.com/aadabathon/PSoC6AI-workingDir
+//     https://github.com/aadabathon/PSoC6-logging-ML
 export const projects: Project[] = [
   {
     slug: "16-bit-processor",
@@ -31,23 +27,6 @@ export const projects: Project[] = [
     imageUrl: "/images/projects/sfp-embedded-project.png",
     repos: [
       { label: "GitHub", url: "https://github.com/aadabathon/SFPmodule" },
-    ],
-    tags: [],
-  },
-  {
-    slug: "psoc6-cy8-ai-board",
-    title: "PSoC6 CY8 AI Board",
-    description: "TODO: add a description.",
-    imageUrl: "/images/projects/psoc6-cy8-ai-board.png",
-    repos: [
-      {
-        label: "AI Working Dir",
-        url: "https://github.com/aadabathon/PSoC6AI-workingDir",
-      },
-      {
-        label: "Logging / ML",
-        url: "https://github.com/aadabathon/PSoC6-logging-ML",
-      },
     ],
     tags: [],
   },

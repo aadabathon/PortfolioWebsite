@@ -28,6 +28,7 @@ export function NavDrawer() {
         onClick={() => setOpen(true)}
         aria-label="Open site navigation"
         aria-expanded={open}
+        aria-controls="site-nav-drawer"
         className="flex h-9 w-9 flex-col items-center justify-center gap-1.5"
       >
         <span className="h-0.5 w-5 bg-slate-700 dark:bg-slate-300" />
@@ -35,11 +36,14 @@ export function NavDrawer() {
         <span className="h-0.5 w-5 bg-slate-700 dark:bg-slate-300" />
       </button>
 
+      {/* `inert` while closed is load-bearing: opacity-0 + pointer-events-none
+          hides the drawer visually but leaves its links in the tab order. */}
       <div
+        id="site-nav-drawer"
         className={`fixed inset-0 z-20 transition-opacity ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
-        aria-hidden={!open}
+        inert={!open}
       >
         <div
           className="absolute inset-0 bg-black/40"
