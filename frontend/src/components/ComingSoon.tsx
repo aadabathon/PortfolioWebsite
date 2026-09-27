@@ -1,21 +1,22 @@
 import { Container } from "./Container";
+import { SectionHeading } from "./SectionHeading";
 
 export function ComingSoon({
+  index,
   title,
   description,
 }: {
+  index: string;
   title: string;
   description: string;
 }) {
   return (
-    <section className="py-16 sm:py-20">
+    <section className="py-20 sm:py-24">
       <Container>
-        <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
-          {title}
-        </h1>
-        <div className="mt-6 rounded-lg border border-dashed border-slate-300 p-12 text-center text-slate-500 dark:border-slate-700 dark:text-slate-400">
+        <SectionHeading index={index}>{title}</SectionHeading>
+        <p className="mt-10 max-w-md text-[15px] leading-7 text-ink-muted">
           {description}
-        </div>
+        </p>
       </Container>
     </section>
   );

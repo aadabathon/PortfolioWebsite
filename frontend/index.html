@@ -10,7 +10,7 @@
       content="Computer Engineering senior at UW–Madison focused on computer architecture, digital design, and VLSI. Projects in SystemVerilog, embedded systems, and software."
     />
     <meta name="author" content="Adam Shebani" />
-    <meta name="theme-color" content="#020617" />
+    <meta name="theme-color" content="#fbfaf7" />
 
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/favicon.png" />
@@ -25,6 +25,28 @@
     />
     <meta property="og:image" content="/images/profile/websitepic1.jpg" />
     <meta name="twitter:card" content="summary" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Applies the saved theme before first paint. Inline and synchronous on
+         purpose: deferring this causes a light-mode flash for dark-mode users. -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          if (saved === "light" || saved === "dark") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {
+          /* Safari private mode throws on localStorage; fall back to the OS. */
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -1,27 +1,26 @@
 import { profile } from "../content/profile";
 
+// Two columns rather than four stacked rows: thirty-odd identical pills in a
+// single column was the noisiest block on the page.
 export function Skills() {
   return (
-    <div className="mt-10">
-      <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+    <div className="mt-16">
+      <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-ink-faint">
         Skills
       </h3>
-      <div className="mt-4 space-y-4">
+      <div className="mt-6 grid gap-x-12 gap-y-8 sm:grid-cols-2">
         {profile.skillGroups.map((group) => (
           <div key={group.title}>
-            <h4 className="text-sm font-medium text-slate-700 dark:text-slate-300">
+            <h4 className="font-mono text-xs uppercase tracking-[0.15em] text-accent">
               {group.title}
             </h4>
-            <div className="mt-2 flex flex-wrap gap-2">
+            <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5">
               {group.skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="rounded-full border border-slate-200 px-3 py-1 text-sm text-slate-700 dark:border-slate-700 dark:text-slate-300"
-                >
+                <li key={skill} className="text-sm text-ink-muted">
                   {skill}
-                </span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         ))}
       </div>

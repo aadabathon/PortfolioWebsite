@@ -1,13 +1,9 @@
 import type { Project } from "../types/project";
 
 // Images live in frontend/public/images/projects/ and are referenced by
-// absolute path. An empty array here makes ProjectsSection fall back to a
-// "coming soon" placeholder.
-//
-// Pending, not listed until they have a description and a screenshot:
-//   PSoC6 CY8 AI Board
-//     https://github.com/aadabathon/PSoC6AI-workingDir
-//     https://github.com/aadabathon/PSoC6-logging-ML
+// absolute path. Omit imageUrl entirely and the card draws a placeholder
+// panel instead — no broken image. An empty array here makes
+// ProjectsSection fall back to a "coming soon" placeholder.
 export const projects: Project[] = [
   {
     slug: "16-bit-processor",
@@ -17,7 +13,7 @@ export const projects: Project[] = [
     repos: [
       { label: "GitHub", url: "https://github.com/aadabathon/16_Bit_CPU" },
     ],
-    tags: [],
+    tags: ["SystemVerilog", "Vivado", "FPGA", "Basys3", "Computer Architecture"],
   },
   {
     slug: "sfp-embedded-project",
@@ -28,7 +24,26 @@ export const projects: Project[] = [
     repos: [
       { label: "GitHub", url: "https://github.com/aadabathon/SFPmodule" },
     ],
-    tags: [],
+    tags: ["PCB Design", "Signal Integrity", "High-Speed Design", "SFP+"],
+  },
+  {
+    slug: "psoc6-cy8-ai-board",
+    title: "PSoC6 CY8 AI Board",
+    // PLACEHOLDER COPY — replace with your own description.
+    description:
+      "An embedded machine learning board built on the Infineon PSoC 6 CY8. Firmware handles on-board sensor acquisition, with a separate logging and ML pipeline that captures runs off the device for training and evaluation. Hardware bring-up is done; the enclosure and the remaining firmware work are still in progress.",
+    repos: [
+      {
+        label: "AI Working Dir",
+        url: "https://github.com/aadabathon/PSoC6AI-workingDir",
+      },
+      {
+        label: "Logging / ML",
+        url: "https://github.com/aadabathon/PSoC6-logging-ML",
+      },
+    ],
+    tags: ["PSoC 6", "Embedded C", "Machine Learning"],
+    status: "in-progress",
   },
   {
     slug: "ece551-soc-mazerunner",
@@ -41,7 +56,7 @@ export const projects: Project[] = [
         url: "https://github.com/aadabathon/ECE551/tree/main/FinalProj",
       },
     ],
-    tags: [],
+    tags: ["SystemVerilog", "SPI", "UART", "PID Control", "Quartus", "Synopsys DC"],
   },
   {
     slug: "quanthub",
@@ -51,7 +66,7 @@ export const projects: Project[] = [
     repos: [
       { label: "GitHub", url: "https://github.com/aadabathon/quanthub" },
     ],
-    tags: [],
+    tags: ["Python", "SQLite", "IBKR API", "Black-Scholes"],
   },
   {
     slug: "mlcookbook",
@@ -61,6 +76,6 @@ export const projects: Project[] = [
     repos: [
       { label: "GitHub", url: "https://github.com/aadabathon/MLcookbook" },
     ],
-    tags: [],
+    tags: ["Python", "Regression", "Random Forests", "PCA"],
   },
 ];
