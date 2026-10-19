@@ -23,6 +23,7 @@ export const profile: Profile = {
     github: "https://github.com/aadabathon",
     linkedin: "https://www.linkedin.com/in/adam-shebani-1741952b4/",
     email: "adamsheb414@gmail.com",
+    phone: "608-630-6233",
     resume: "/resume.pdf",
     resumeSoftware: "/resume-software.pdf",
   },
