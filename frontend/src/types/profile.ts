@@ -13,6 +13,7 @@ export interface Profile {
     linkedin: string;
     email: string;
     resume: string;
+    resumeSoftware: string;
   };
   skillGroups: SkillGroup[];
 }

@@ -24,6 +24,7 @@ export const profile: Profile = {
     linkedin: "https://www.linkedin.com/in/adam-shebani-1741952b4/",
     email: "adamsheb414@gmail.com",
     resume: "/resume.pdf",
+    resumeSoftware: "/resume-software.pdf",
   },
   skillGroups: [
     {
