@@ -17,6 +17,9 @@ export interface Project {
   repos: ProjectRepo[];
   tags: string[];
   demoUrl?: string;
+  // Slug of a blog post about the project (content/blog/<slug>.md), linked
+  // from the project page as an in-site link rather than a new tab.
+  postSlug?: string;
   // Marks work that's still active, so the card can say so instead of
   // looking like a finished project that's missing its screenshot.
   status?: "in-progress";

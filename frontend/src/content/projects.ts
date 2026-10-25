@@ -67,6 +67,7 @@ export const projects: Project[] = [
       { label: "GitHub", url: "https://github.com/aadabathon/quanthub" },
     ],
     tags: ["Python", "SQLite", "IBKR API", "Black-Scholes"],
+    postSlug: "quanthub",
   },
   {
     slug: "mlcookbook",

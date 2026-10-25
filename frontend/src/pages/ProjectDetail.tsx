@@ -59,6 +59,14 @@ export function ProjectDetail() {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 border-t border-rule pt-6">
+          {project.postSlug && (
+            <Link
+              to={`/blog/${project.postSlug}`}
+              className="font-mono text-xs uppercase tracking-[0.15em] text-ink-muted underline decoration-rule-strong underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
+            >
+              Read the write-up
+            </Link>
+          )}
           {project.repos.map((repo) => (
             <a
               key={repo.url}
