@@ -89,4 +89,4 @@ You can sort of watch that happen. Much of the industry's center of gravity seem
 
 ## Try it
 
-QuantHub is on GitHub at [github.com/aadabathon/quanthub](https://github.com/aadabathon/quanthub). It runs fully on synthetic data with no broker connection at all, so you can clone it and poke around the labs in a few minutes. If you're a retail trader who feels like something is missing from your decision-making process, take a look and see whether it can help you reach your investing goals.
+QuantHub is open source under the MIT license, on GitHub at [github.com/aadabathon/quanthub](https://github.com/aadabathon/quanthub). It runs fully on synthetic data with no broker connection at all, so you can clone it and poke around the labs in a few minutes. If you're a retail trader who feels like something is missing from your decision-making process, take a look and see whether it can help you reach your investing goals.
